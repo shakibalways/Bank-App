@@ -36,7 +36,7 @@ class BottomNavBar extends StatelessWidget {
                   label: "Home",
                 ),
                 BottomNavigationBarItem(
-                  icon: Image.asset("assets/images/bottomNavBar/cards.png",height: 40,width: 40,fit: BoxFit.fitHeight,),
+                  icon: Image.asset("assets/images/bottomNavBar/cards.png",height: 50,width: 50,fit: BoxFit.fitHeight,),
                   label: "My Carts",
                 ),
                 BottomNavigationBarItem(
