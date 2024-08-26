@@ -18,7 +18,7 @@ class BottomNavBar extends StatelessWidget {
             height: 100,
             color: Colors.yellow,
             child: BottomNavigationBar(
-              selectedItemColor: Colors.red,
+              selectedItemColor: Colors.green,
               unselectedItemColor: Colors.grey,
               currentIndex: bottomNavBarController.page.value,
               key: bottomNavBarController.bottomNavigationKey,
@@ -36,20 +36,18 @@ class BottomNavBar extends StatelessWidget {
                   label: "Home",
                 ),
                 BottomNavigationBarItem(
-                  icon: Image.asset("assets/images/bottomNavBar/cards.png"),
+                  icon: Image.asset("assets/images/bottomNavBar/cards.png",height: 40,width: 40,fit: BoxFit.fitHeight,),
                   label: "My Carts",
                 ),
                 BottomNavigationBarItem(
                   icon:
-                      Image.asset("assets/images/bottomNavBar/statistics.png"),
+                      Image.asset("assets/images/bottomNavBar/statistics.png",height: 30,width: 30,fit: BoxFit.fitHeight,),
                   label: "Statistics",
                 ),
                 BottomNavigationBarItem(
                   icon: Image.asset(
                     "assets/images/bottomNavBar/setting.png",
-                    height: 40,
-                    width: 40,
-                    fit: BoxFit.fitHeight,
+                    height: 30,width: 30,fit: BoxFit.fitHeight,
                   ),
                   label: "Settings",
                 ),

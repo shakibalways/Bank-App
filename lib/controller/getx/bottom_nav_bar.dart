@@ -1,6 +1,5 @@
-import 'package:bank_app/views/pages/onboarding/onboarding_one.dart';
-import 'package:bank_app/views/pages/onboarding/onboarding_secend.dart';
-import 'package:bank_app/views/pages/onboarding/onboarding_third.dart';
+import 'package:bank_app/views/pages/auth/login/login.dart';
+import 'package:bank_app/views/pages/auth/sign_up/sign_up.dart';
 import 'package:bank_app/views/pages/splash/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,9 +9,9 @@ class BottomNavBarController extends GetxController{
   RxInt page = 0.obs;
   List<Widget> pages = [
     const SplashPage(),
-    const OnboardingOnePage(),
-    const OnboardingSecendPage(),
-    const OnboardingThirdPage(),
+    const LoginPage(),
+    const SignUpPage(),
+    const LoginPage(),
   ].obs;
 
 }
