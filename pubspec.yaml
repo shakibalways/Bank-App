@@ -64,6 +64,8 @@ flutter:
     - assets/images/sp_logo/
     - assets/images/onboardingImage/
     - assets/images/bottomNavBar/
+    - assets/images/containerImage/
+    - assets/images/vector/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
