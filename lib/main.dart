@@ -1,6 +1,7 @@
 
-import 'package:bank_app/views/pages/auth/sign_up/sign_up.dart';
+import 'package:bank_app/views/pages/bottomnavBar/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 
 void main(){
@@ -11,9 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignUpPage(),
+      home: BottomNavBar(),
     );
   }
 }

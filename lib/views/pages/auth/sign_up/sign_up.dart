@@ -48,49 +48,48 @@ class _SignUpPageState extends State<SignUpPage> {
               const SizedBox(
                 height: 30,
               ),
-              Column(
+              const Column(
                 children: [
-                  const MyNameField(),
-                  const SizedBox(
+                  MyNameField(),
+                  SizedBox(
                     height: 40,
                   ),
-                  const MyPhoneField(),
-                  const SizedBox(
+                  MyPhoneField(),
+                  SizedBox(
                     height: 40,
                   ),
-
-                  const MyEmailField(),
-                  const SizedBox(
+                  MyEmailField(),
+                  SizedBox(
                     height: 40,
                   ),
-                  const MyPassField(),
-                  const SizedBox(
-                    height: 40,
+                  MyPassField(),
+                ],
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              const MyButton(
+                textName: "Sign Up",
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const CustomText(
+                    textName: "Already have an account.?",
+                    fontWeight: FontWeight.w500,
+                    fSize: 14,
+                    color: Colors.grey,
                   ),
-                  const MyButton(
-                    textName: "Sign In",
+                  CustomText(
+                    textName: "Sign Up",
+                    fontWeight: FontWeight.bold,
+                    fSize: 18,
+                    color: RColors.bColors,
+                    onTap: () {},
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const CustomText(
-                        textName: "Already have an account.?",
-                        fontWeight: FontWeight.w500,
-                        fSize: 14,
-                        color: Colors.grey,
-                      ),
-                      CustomText(
-                        textName: "Sign In",
-                        fontWeight: FontWeight.bold,
-                        fSize: 18,
-                        color: RColors.bColors,
-                        onTap: () {},
-                      ),
-                    ],
-                  )
                 ],
               )
             ],
