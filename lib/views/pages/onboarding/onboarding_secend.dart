@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:bank_app/components/my_button.dart';
 import 'package:bank_app/utils/const/color_code.dart';
 import 'package:bank_app/utils/const/text_list.dart';
-import 'package:flutter/material.dart';
 
 class OnboardingSecendPage extends StatelessWidget {
   const OnboardingSecendPage({super.key});
