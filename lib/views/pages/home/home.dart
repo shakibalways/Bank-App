@@ -97,6 +97,7 @@ class HomePage extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 2, bottom: 2),
                       child: Container(
                         height: height / 8.5,
+                        width: width,
                         color: Colors.white12,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
