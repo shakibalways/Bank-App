@@ -1,5 +1,6 @@
 import 'package:bank_app/components/custom_text.dart';
 import 'package:bank_app/components/my_custom_card_container.dart';
+import 'package:bank_app/model/list/transaction_list.dart';
 import 'package:bank_app/utils/const/color_code.dart';
 import 'package:bank_app/views/pages/home/widget/custom_cotainer.dart';
 import 'package:flutter/material.dart';
@@ -93,35 +94,36 @@ class HomePage extends StatelessWidget {
                   child: ListView.builder(
                       shrinkWrap: true,
                       physics: const PageScrollPhysics(),
-                      itemCount: 6,
+                      itemCount: transactionList.length,
                       itemBuilder: (context, index) {
+                        var data = transactionList[index];
                         return Padding(
                           padding: const EdgeInsets.only(top: 2, bottom: 2),
                           child: Container(
                             height: MediaQuery.of(context).size.height * 0.10,
                             color: Colors.white12,
-                            child: const Column(
+                            child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 ListTile(
                                   leading: MyCustomContainer(
-                                    icon: Icons.apple,
+                                    icon: data.icon,
                                     height: 55,
                                     width: 55,
                                     color: Colors.black,
                                   ),
                                   title: CustomText(
-                                    textName: "Apple Store",
+                                    textName: data.title,
                                     fSize: 23,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                   subtitle: CustomText(
-                                    textName: "Entertainment",
+                                    textName: data.subTitle,
                                     fSize: 16,
                                     fontWeight: FontWeight.w300,
                                   ),
                                   trailing: CustomText(
-                                    textName: "-\$5,99",
+                                    textName: data.amount,
                                     fSize: 18,
                                   ),
                                 ),

@@ -20,14 +20,14 @@ class MyCustomContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: height ?? 70,
-        width: width ?? 70,
+        height: height ?? 62,
+        width: width ?? 62,
         decoration:
             const BoxDecoration(shape: BoxShape.circle, color: Colors.black12),
         child: Center(
             child: Icon(
           icon ?? Icons.send,
-          size: 32,
+          size: 30,
           color:color ?? Colors.black54,
         )),
       ),
