@@ -11,7 +11,7 @@ class MyCustomCardContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height / 3.5,
+      height: MediaQuery.of(context).size.height /4,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
           color: RColors.containerColors,
@@ -23,14 +23,14 @@ class MyCustomCardContainer extends StatelessWidget {
               ))),
       child: Padding(
         padding:
-        const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+        const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
               "assets/images/vector/sim.png",
-              height: 60,
-              width: 60,
+              height: 50,
+              width: 50,
               fit: BoxFit.fitHeight,
             ),
             const CustomText(
@@ -38,7 +38,7 @@ class MyCustomCardContainer extends StatelessWidget {
               color: Colors.white,
             ),
             const CustomText(
-              textName: "Abdullah\nShakib",
+              textName: "AbdullahShakib",
               color: Colors.white,
               fSize: 16,
             ),
@@ -62,9 +62,7 @@ class MyCustomCardContainer extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      width: 20,
-                    ),
+
                     Column(
                       children: [
                         CustomText(
@@ -86,8 +84,8 @@ class MyCustomCardContainer extends StatelessWidget {
                   children: [
                     Image.asset(
                       "assets/images/vector/mastercard.png",
-                      height: 65,
-                      width: 65,
+                      height: 50,
+                      width: 50,
                       fit: BoxFit.fitHeight,
                     ),
                     const CustomText(

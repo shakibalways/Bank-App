@@ -10,10 +10,12 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
+          padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             children: [
               Row(
@@ -43,7 +45,7 @@ class HomePage extends StatelessWidget {
                             ),
                             CustomText(
                               textAlign: TextAlign.center,
-                              textName: "Abdullah\nShakib",
+                              textName: "Abdullah Shakib",
                               fSize: 22,
                               fontWeight: FontWeight.w400,
                             ),
@@ -79,59 +81,50 @@ class HomePage extends StatelessWidget {
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  CustomText(textName: "Transaction", fSize: 25),
                   CustomText(
-                    textName: "Transaction",
-                    fSize: 25,
-                  ),
-                  CustomText(
-                    textName: "Sell all",
-                    fSize: 22,
-                    color: RColors.iColors,
-                  ),
+                      textName: "Sell all", fSize: 22, color: RColors.iColors),
                 ],
               ),
               Expanded(
-                  child: ListView.builder(
-                      shrinkWrap: true,
-                      physics: const PageScrollPhysics(),
-                      itemCount: transactionList.length,
-                      itemBuilder: (context, index) {
-                        var data = transactionList[index];
-                        return Padding(
-                          padding: const EdgeInsets.only(top: 2, bottom: 2),
-                          child: Container(
-                            height: MediaQuery.of(context).size.height * 0.10,
-                            color: Colors.white12,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                ListTile(
-                                  leading: MyCustomContainer(
-                                    icon: data.icon,
-                                    height: 55,
-                                    width: 55,
-                                    color: Colors.black,
-                                  ),
-                                  title: CustomText(
-                                    textName: data.title,
-                                    fSize: 23,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                  subtitle: CustomText(
-                                    textName: data.subTitle,
-                                    fSize: 16,
-                                    fontWeight: FontWeight.w300,
-                                  ),
-                                  trailing: CustomText(
-                                    textName: data.amount,
-                                    fSize: 18,
-                                  ),
-                                ),
-                              ],
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  physics: const PageScrollPhysics(),
+                  itemCount: transactionList.length,
+                  itemBuilder: (context, index) {
+                    var data = transactionList[index];
+                    return Padding(
+                      padding: const EdgeInsets.only(top: 2, bottom: 2),
+                      child: Container(
+                        height: height / 8.5,
+                        color: Colors.white12,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            ListTile(
+                              leading: MyCustomContainer(
+                                  icon: data.icon,
+                                  height: 55,
+                                  width: 55,
+                                  color: Colors.black),
+                              title: CustomText(
+                                  textName: data.title,
+                                  fSize: 23,
+                                  fontWeight: FontWeight.w500),
+                              subtitle: CustomText(
+                                  textName: data.subTitle,
+                                  fSize: 16,
+                                  fontWeight: FontWeight.w300),
+                              trailing:
+                                  CustomText(textName: data.amount, fSize: 18),
                             ),
-                          ),
-                        );
-                      }))
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         ),

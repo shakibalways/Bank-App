@@ -14,7 +14,6 @@ class MyCustomContainer extends StatelessWidget {
     this.width,
     this.color,
   });
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
