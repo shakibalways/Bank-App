@@ -1,4 +1,4 @@
-import 'package:bank_app/utils/const/text_list.dart';
+
 import 'package:flutter/material.dart';
 
 class TransactionModel {
