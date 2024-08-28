@@ -96,11 +96,37 @@ class HomePage extends StatelessWidget {
                       itemCount: 6,
                       itemBuilder: (context, index) {
                         return Padding(
-                          padding: const EdgeInsets.only(top: 5, bottom: 5),
+                          padding: const EdgeInsets.only(top: 2, bottom: 2),
                           child: Container(
-                            height: MediaQuery.of(context).size.height*0.10,
-                            color: Colors.red,
-                            child: const ListTile(),
+                            height: MediaQuery.of(context).size.height * 0.10,
+                            color: Colors.white12,
+                            child: const Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ListTile(
+                                  leading: MyCustomContainer(
+                                    icon: Icons.apple,
+                                    height: 55,
+                                    width: 55,
+                                    color: Colors.black,
+                                  ),
+                                  title: CustomText(
+                                    textName: "Apple Store",
+                                    fSize: 23,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  subtitle: CustomText(
+                                    textName: "Entertainment",
+                                    fSize: 16,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                  trailing: CustomText(
+                                    textName: "-\$5,99",
+                                    fSize: 18,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         );
                       }))
