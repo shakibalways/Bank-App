@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class MyCustomContainer extends StatelessWidget {
+  final double? height;
+  final double? width;
   final void Function()? onTap;
-
   final IconData? icon;
   const MyCustomContainer({
     super.key,
     this.onTap,
-    required this.icon,
+    required this.icon,  this.height,  this.width,
   });
 
   @override
@@ -15,8 +16,8 @@ class MyCustomContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 70,
-        width: 70,
+        height:height ?? 70,
+        width:width ?? 70,
         decoration: const BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.black12

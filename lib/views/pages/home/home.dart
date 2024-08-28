@@ -18,19 +18,17 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Row(
+                  Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         radius: 30,
                         backgroundColor: RColors.avColors,
                         backgroundImage:
                             AssetImage("assets/images/bottomNavBar/home.png"),
                       ),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Padding(
+                      buildSizedBox(width: 15),
+                      const Padding(
                         padding: EdgeInsets.only(top: 40),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -64,11 +62,9 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 25,
-              ),
+              buildSizedBox(height: 25),
               const MyCustomCardContainer(),
-              SizedBox(height: 15,),
+              buildSizedBox(height: 15),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -78,13 +74,45 @@ class HomePage extends StatelessWidget {
                   MyCustomContainer(icon: Icons.vertical_align_top_sharp),
                 ],
               ),
-
+              buildSizedBox(height: 20),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CustomText(
+                    textName: "Transaction",
+                    fSize: 25,
+                  ),
+                  CustomText(
+                    textName: "Sell all",
+                    fSize: 22,
+                    color: RColors.iColors,
+                  ),
+                ],
+              ),
+              Expanded(
+                  child: ListView.builder(
+                      shrinkWrap: true,
+                      physics: const PageScrollPhysics(),
+                      itemCount: 6,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.only(top: 5, bottom: 5),
+                          child: Container(
+                            height: MediaQuery.of(context).size.height*0.10,
+                            color: Colors.red,
+                            child: const ListTile(),
+                          ),
+                        );
+                      }))
             ],
           ),
         ),
       ),
     );
   }
+
+  SizedBox buildSizedBox({double? height, double? width}) => SizedBox(
+        height: height,
+        width: width,
+      );
 }
-
-
