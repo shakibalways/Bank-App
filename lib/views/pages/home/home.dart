@@ -70,17 +70,14 @@ class HomePage extends StatelessWidget {
               const MyCustomCardContainer(),
               SizedBox(height: 15,),
               const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // MyCustomContainer(child: Icon(Icons.send),),
-                  // MyCustomContainer(child: Icon(Icons.arrow_downward),),
-                  // MyCustomContainer(child: Icon(Icons.monetization_on_outlined),),
-                  // MyCustomContainer(child: Icon(Icons.vertical_align_top_sharp),),
                   MyCustomContainer(icon: Icons.send),
                   MyCustomContainer(icon: Icons.arrow_downward),
                   MyCustomContainer(icon: Icons.monetization_on_outlined),
                   MyCustomContainer(icon: Icons.vertical_align_top_sharp),
                 ],
-              )
+              ),
 
             ],
           ),

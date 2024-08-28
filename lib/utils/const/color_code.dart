@@ -7,6 +7,7 @@ class RColors{
   static const avColors= Color(0xff707070);
 
   static const containerColors= Color(0xff2A2C3C);
+  static const cColors= Color(0xffF4F4F4);
 
 
 

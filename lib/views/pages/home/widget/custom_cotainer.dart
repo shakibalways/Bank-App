@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class MyCustomContainer extends StatelessWidget {
   final void Function()? onTap;
 
-  final IconData icon;
+  final IconData? icon;
   const MyCustomContainer({
     super.key,
     this.onTap,
@@ -15,16 +15,16 @@ class MyCustomContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 60,
-        width: 60,
+        height: 70,
+        width: 70,
         decoration: const BoxDecoration(
           shape: BoxShape.circle,
-          color: Colors.black38,
+          color: Colors.black12
         ),
         child: Center(
             child: Icon(
           icon ?? Icons.send,
-          size: 35,
+          size: 32,color: Colors.black54,
         )),
       ),
     );

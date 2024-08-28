@@ -1,6 +1,6 @@
 
 import 'package:bank_app/views/pages/bottomnavBar/bottom_nav_bar.dart';
-import 'package:bank_app/views/pages/home/home.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
